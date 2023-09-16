@@ -1,0 +1,18 @@
+.button {
+  background-color: var(--text);
+  color: var(--background);
+  padding: 20px;
+  width: fit-content;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.secondary {
+  color: var(--text);
+  background-color: var(--background);
+  border: 2px solid var(--text);
+}
+
+.smallButton {
+  padding: 10px 20px;
+}

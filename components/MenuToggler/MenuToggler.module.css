@@ -1,0 +1,8 @@
+.menuToggler {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

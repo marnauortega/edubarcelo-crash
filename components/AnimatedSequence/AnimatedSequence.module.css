@@ -1,0 +1,45 @@
+.wrapper {
+  height: 100vh;
+  /* z-index: 6; */
+}
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hiddenCanvas {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scrollDown {
+  position: fixed;
+  top: min(100px, 12vw);
+  right: min(100px, 12vw);
+  z-index: 6;
+  animation: rotation 6s linear infinite;
+}
+
+.image {
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+}
+
+.canvas,
+.image {
+  position: absolute;
+  top: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

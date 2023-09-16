@@ -1,0 +1,35 @@
+.swiper {
+  /* width: 40vw; */
+  /* width: 700px; */
+  width: calc(75vh * 0.66 + 120px + 17px);
+  display: flex;
+  gap: 17px;
+}
+
+.swiper > div {
+  /* width: calc(40vw - 120px - 17px); */
+  /* width: 563px; */
+  width: calc(75vh * 0.66);
+}
+
+.slideImage {
+  height: auto;
+  /* width: calc(40vw - 120px - 17px); */
+  /* width: 563px; */
+  width: calc(75vh * 0.66);
+  margin: auto;
+}
+
+.thumbs {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.thumb {
+  width: 120px;
+  height: auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}

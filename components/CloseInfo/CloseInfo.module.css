@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+}
+
+.close {
+  filter: var(--filter);
+  cursor: pointer;
+}
+
+.closeBg {
+  filter: var(--filter);
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  /* right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  z-index: -1;
+}

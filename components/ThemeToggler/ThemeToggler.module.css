@@ -1,0 +1,19 @@
+.toggler {
+  cursor: pointer;
+  filter: var(--filter);
+  margin-right: 2px;
+}
+
+.hiddenToggler {
+  height: 27px;
+  width: 27px;
+  margin-right: 2px;
+}
+
+@media (max-width: 640px) {
+  .toggler {
+    position: fixed;
+    right: var(--main-padding);
+    bottom: var(--main-padding);
+  }
+}

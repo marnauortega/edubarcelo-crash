@@ -1,0 +1,14 @@
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  width: 80%;
+  height: auto;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

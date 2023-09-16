@@ -1,0 +1,20 @@
+.nav {
+  margin: var(--top-padding) 0 50px;
+  width: calc(100% - 120px);
+}
+
+.category {
+  cursor: pointer;
+}
+
+.active {
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    margin: unset;
+    margin-bottom: 1rem;
+    width: auto;
+  }
+}

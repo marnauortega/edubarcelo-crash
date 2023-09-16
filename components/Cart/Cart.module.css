@@ -1,0 +1,297 @@
+.cartToggler {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cartIcon {
+  filter: var(--filter);
+}
+
+.cartIconBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: var(--filter);
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  background: var(--background);
+  padding: var(--top-padding) var(--main-padding);
+  border-bottom: 2px solid var(--text);
+  transition: transform 0.3s ease;
+}
+
+.cart::-webkit-scrollbar {
+  display: none;
+}
+
+.cartClosed {
+  transform: translateY(-101%);
+}
+
+.close {
+  display: none;
+}
+
+.cartGrid {
+  margin-top: 35px;
+  /* padding-bottom: 10px; */
+  max-height: 50vh;
+  overflow: scroll;
+}
+
+.cartGridWrapper {
+  position: relative;
+}
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(transparent, var(--background) 60%);
+}
+
+.arrowDown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cartLine,
+.gridFooter,
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  align-items: flex-start;
+}
+
+.cartLine {
+  border-bottom: 2px solid var(--text);
+  list-style: none;
+  padding: 25px 0;
+  /* To make all lines equal height use the following */
+  /* Otherwise lines adjust to artwork's height  */
+  /* height: calc(120px * 1.4); */
+}
+
+.cartLine:first-of-type {
+  border-top: 2px solid var(--text);
+}
+
+.cartLine:last-of-type {
+  margin-bottom: 60px;
+}
+
+.itemLeft {
+  display: flex;
+  gap: 35px;
+}
+
+.itemRight {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageWrapper {
+  line-height: 0;
+}
+
+.imageWrapper img {
+  width: 120px;
+  height: auto;
+}
+
+.quantity {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.quantityUpdater {
+  cursor: pointer;
+  filter: var(--filter);
+  height: 25px;
+}
+
+.increase {
+  padding-left: 20px;
+}
+
+.decrease {
+  padding-right: 20px;
+}
+
+.quantityNumber {
+  width: 12px;
+}
+
+.quantityMobile {
+  display: none;
+}
+
+.removeButton {
+  cursor: pointer;
+  padding-right: 5px;
+  filter: var(--filter);
+}
+
+.lineTotal {
+  text-align: right;
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+.subtotal {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.emptySpan {
+  width: 12px;
+}
+
+.cartBg {
+  position: fixed;
+  inset: 0;
+  background-color: var(--text);
+  opacity: 0.2;
+  z-index: -1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.cartBgHidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emptyCart {
+  padding-top: 25px;
+}
+
+@media (max-width: 800px) {
+  .titleAndCloseWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cartLine {
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+  }
+
+  .itemLeft {
+    gap: 15px;
+  }
+
+  .imageWrapper img {
+    width: 100px;
+  }
+
+  .quantity {
+    gap: 0;
+  }
+
+  .quantityDesktop {
+    display: none;
+  }
+
+  .quantityMobile {
+    display: flex;
+  }
+
+  .titleAndQuantityWrapper,
+  .itemRight {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .itemRight {
+    align-items: flex-end;
+  }
+
+  .gridFooter {
+    display: block;
+  }
+
+  .subtotal {
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .emptySpan {
+    display: none;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .cartToggler {
+    position: fixed;
+    left: var(--main-padding);
+    bottom: var(--main-padding);
+  }
+
+  .cartGrid {
+    margin-top: 25px;
+  }
+
+  .close {
+    display: initial;
+    filter: var(--filter);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 430px) {
+  .buttons {
+    flex-direction: column-reverse;
+  }
+
+  .buttons button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .continueShopping {
+    display: none;
+  }
+}
+
+@media (max-width: 325px) {
+  .imageWrapper img {
+    width: 90px;
+  }
+
+  .cartLine,
+  .itemLeft {
+    gap: 10px;
+  }
+}

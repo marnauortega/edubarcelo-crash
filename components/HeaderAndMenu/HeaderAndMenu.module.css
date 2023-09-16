@@ -1,0 +1,41 @@
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--main-padding);
+  padding-top: var(--top-padding);
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.header .h2 {
+  z-index: -1;
+}
+
+.cartAndThemeToggler {
+  position: fixed;
+  right: var(--main-padding);
+  top: var(--top-padding);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 4;
+}
+
+@media (min-width: 640px) {
+  .header {
+    display: none;
+  }
+}
